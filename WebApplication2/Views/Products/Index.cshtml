@@ -1,0 +1,16 @@
+﻿@using WebApplication2.Models;
+@model IEnumerable<Product>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <div class="row">
+            @foreach (Product item in Model)
+            {
+                <div class="col-md-4 px-1">
+                    @Html.Partial("ProductCard", item)
+                </div>
+            }
+        </div>
+    </div>
